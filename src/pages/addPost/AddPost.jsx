@@ -98,7 +98,11 @@ const AddPost = () => {
             )}
           </div>
           {img && (
-            <img src={`http://localhost:3333${img}`} alt={'imageUrl'} className="addpost__img" />
+            <img
+              src={`process.env.REACT_APP_API_URL${img}`}
+              alt={'imageUrl'}
+              className="addpost__img"
+            />
           )}
           <div className="addpost__title">
             <input

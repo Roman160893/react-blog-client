@@ -29,7 +29,7 @@ const Registration = () => {
 
   const onSubmit = async (value) => {
     const data = await dispatch(
-      fetchRegister({ ...value, avatarUrl: `http://localhost:3333${img}` }),
+      fetchRegister({ ...value, avatarUrl: `process.env.REACT_APP_API_URL${img}` }),
     );
     if (data.payload) {
       window.localStorage.setItem('token', data.payload.token);
