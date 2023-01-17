@@ -42,7 +42,7 @@ const Posts = ({
             className={classNames('post__item', {
               'post__item-full': isFullPost,
             })}>
-            {imageUrl && <img src={`process.env.REACT_APP_API_URL${imageUrl}`} alt="img" />}
+            {imageUrl && <img src={`${process.env.REACT_APP_API_URL}${imageUrl}`} alt="img" />}
             <div className="post__item-info post-info">
               <div className="post-info__img">
                 <img
