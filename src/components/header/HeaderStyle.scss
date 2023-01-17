@@ -1,0 +1,50 @@
+.header {
+  padding: 5px;
+  background: rgb(255, 255, 255);
+  border-bottom: 2px solid rgb(141, 139, 139);
+
+  &__container {
+    max-width: 980px;
+    padding: 0 10px;
+    margin: 0 auto;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+  }
+
+  &__logo {
+    font-size: 48px;
+    line-height: 110%;
+    font-family: 'Rubik Beastly', cursive;
+    text-transform: uppercase;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  @media screen and (max-width: 800px) {
+    &__content {
+      gap: 15px;
+    }
+
+    .header {
+      &__logo {
+        font-size: 30px;
+        font-weight: 300;
+      }
+    }
+
+    &__btn {
+      gap: 10px;
+    }
+  }
+}

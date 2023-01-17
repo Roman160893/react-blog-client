@@ -1,0 +1,62 @@
+.pagination {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    a {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+      color: rgb(109, 109, 110);
+      border: 3px solid rgb(109, 109, 110);
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      font-weight: 600;
+      background: rgb(221, 219, 219);
+      font-size: 22px;
+      cursor: pointer;
+      transition: all 0.2s linear;
+
+      &:hover {
+        background: rgba(0, 0, 255, 0.536);
+        border: 3px solid rgb(3, 3, 163);
+        color: black;
+      }
+    }
+  }
+
+  .selected {
+    a {
+      background: rgba(0, 0, 255, 0.536);
+      border: 3px solid rgb(3, 3, 163);
+      color: black;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    justify-content: center;
+    li {
+      a {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        color: rgb(109, 109, 110);
+        border: 3px solid rgb(109, 109, 110);
+        border-radius: 50%;
+        width: 10px;
+        height: 10px;
+        font-weight: 600;
+        background: rgb(221, 219, 219);
+        font-size: 22px;
+        cursor: pointer;
+        transition: all 0.2s linear;
+      }
+    }
+  }
+}

@@ -1,0 +1,216 @@
+.post {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 10px;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__control {
+    position: absolute;
+    top: 15px;
+    right: 5px;
+    visibility: hidden;
+    transform: translateX(100%);
+    transition: all 0.2s linear;
+    z-index: 15;
+    i {
+      font-size: 22px;
+      margin: 5px 8px;
+      background: rgb(255, 255, 255);
+      padding: 10px;
+      border-radius: 50%;
+      transition: all 0.2s linear;
+      cursor: pointer;
+      &:hover {
+        transform: scale(1.1);
+        color: red;
+      }
+    }
+  }
+
+  &:hover {
+    & .post__control {
+      visibility: visible;
+      transform: translateX(0%);
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid;
+    max-width: 100%;
+    border-radius: 5px;
+    gap: 10px;
+    background: #ffffff;
+    transition: all 0.2s linear;
+
+    &:hover {
+      box-shadow: 0px 0px 2px 2px rgb(28, 4, 188);
+      background: rgba(3, 67, 197, 0.178);
+    }
+
+    & img {
+      width: 100%;
+      max-height: 250px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+
+    .post-info {
+      display: flex;
+      gap: 10px;
+      justify-content: space-around;
+      width: 100%;
+      padding: 10px 5px 10px 5px;
+      &__img {
+        flex: 0 1 auto;
+        padding-left: 5px;
+        img {
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+      }
+      &__user {
+        flex: 0 1 85%;
+        padding-right: 5px;
+        &-name {
+          font-size: 20px;
+          font-weight: 600;
+          margin-bottom: 10px;
+        }
+
+        &-date {
+          font-size: 14px;
+          color: gray;
+          margin-bottom: 10px;
+        }
+
+        &-content {
+          font-size: 18px;
+          line-height: 150%;
+          font-weight: 600;
+          text-align: justify;
+          margin-bottom: 10px;
+          transition: all 0.2s linear;
+          cursor: pointer;
+        }
+
+        &-text {
+          font-size: 18px;
+          font-weight: 400;
+          margin-bottom: 15px;
+        }
+
+        &-tags {
+          font-size: 14px;
+          color: gray;
+          margin-bottom: 10px;
+          display: inline-block;
+          margin-right: 10px;
+          transition: all 0.2s linear;
+          &:hover {
+            color: black;
+            cursor: pointer;
+            font-weight: 600;
+            transform: scale(1.1);
+          }
+        }
+
+        &-control {
+          display: flex;
+          align-items: center;
+          gap: 25px;
+
+          div {
+            display: flex;
+            gap: 7px;
+            color: gray;
+            font-weight: 600;
+          }
+        }
+      }
+      @media screen and (max-width: 500px) {
+        padding: 5px 5px 5px 5px;
+
+        &__user {
+          &-name {
+            margin-bottom: 5px;
+          }
+
+          &-date {
+            margin-bottom: 10px;
+          }
+
+          &-content {
+            line-height: 110%;
+            margin-bottom: 10px;
+            cursor: pointer;
+          }
+
+          &-text {
+            margin-bottom: 10px;
+          }
+
+          &-control {
+            gap: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  &__item-full {
+    &.post__item {
+      cursor: default;
+    }
+    img {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+
+    &:hover {
+      background: rgb(255, 255, 255);
+      box-shadow: none;
+      color: black;
+    }
+
+    &::after {
+      display: none;
+    }
+
+    & .post-info__user-content {
+      font-size: 30px;
+    }
+
+    @media screen and (max-width: 800px) {
+      & .post-info__user-content {
+        font-size: 24px;
+        line-height: 100%;
+      }
+
+      & .post-info__user-text {
+        font-size: 16px;
+        font-weight: 400;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+.skeleton {
+  background-color: rgb(255, 255, 255);
+  border: 1px solid #dedede;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}

@@ -1,0 +1,8 @@
+.full-post {
+  width: 100%;
+  min-height: 100vh;
+  margin: 15px auto;
+  @media screen and (max-width: 500px) {
+    width: 100%;
+  }
+}

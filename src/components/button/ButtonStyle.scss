@@ -1,0 +1,68 @@
+.button {
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 600;
+  cursor: pointer;
+  box-sizing: border-box;
+
+  &.outline {
+    background: inherit;
+    padding: 5px 20px;
+    border: 2px solid rgb(95, 92, 92);
+    border-radius: 10px;
+    transition: all 0.1s linear;
+
+    &:hover {
+      background: rgb(215, 213, 213);
+      border: 2px solid rgb(199, 190, 190);
+    }
+
+    &:active {
+      transform: translateY(1%);
+    }
+  }
+
+  &.primary {
+    background: rgb(8, 54, 123);
+    padding: 5px 20px;
+    border: 2px solid rgb(8, 54, 123);
+    border-radius: 10px;
+    color: white;
+    transition: background 0.3s linear;
+
+    &:hover {
+      background: rgb(8, 146, 170);
+      border: 2px solid rgb(7, 88, 117);
+    }
+
+    &:active {
+      transform: translateY(1%);
+    }
+  }
+
+  &.red {
+    background: rgb(218, 10, 20);
+    padding: 5px 20px;
+    border: 2px solid rgb(145, 4, 16);
+    border-radius: 10px;
+    color: white;
+    transition: background 0.3s linear;
+
+    &:hover {
+      background: rgb(158, 6, 19);
+      border: 2px solid rgb(7, 88, 117);
+    }
+    W &:active {
+      transform: translateY(1%);
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    &.outline {
+      padding: 3px 10px;
+    }
+
+    &.primary {
+      padding: 3px 10px;
+    }
+  }
+}
